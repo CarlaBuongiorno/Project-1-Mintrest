@@ -20,3 +20,7 @@ The New Post page `(/newpost/)` also contains the logo at the top, but this page
 - _DESCRIPTION_: a full description of the post
 
 There is also a button to allow the user to submit the post. If the submission succeeds, the website redirects the user to the root page, where the new post is visible.
+
+### How To Run Mintrest
+
+To run this application, type `flask run`. You can then open the brower to http://127.0.0.1:5000/ and see your application being rendered. By adding the `--debug` tag to the `flask run` command, you enable debug mode. The server will automatically reload if code changes, and will show an interactive debugger in the browser if an error occurs during a request.
