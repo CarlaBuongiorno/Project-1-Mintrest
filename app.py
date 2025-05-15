@@ -1,11 +1,9 @@
-"""test Flask with this"""
-
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Home Page'
+    return render_template('index.html')
 
 
 @app.route('/newpost/')
