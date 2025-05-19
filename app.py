@@ -10,4 +10,4 @@ def index():
 
 @app.route('/newpost/')
 def new_post():
-    return 'New Post page'
+    return render_template('new-post.html')
