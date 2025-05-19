@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     with open('hello.txt', 'r') as file:
-        message = file.read()
-    return render_template('index.html', message=message)
+        messages = [message.strip() for message in file]
+    return render_template('index.html', messages=messages)
 
 
 @app.route('/newpost/')

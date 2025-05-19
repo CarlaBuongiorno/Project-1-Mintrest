@@ -3,7 +3,11 @@
 {% block content %}
 
 <header>
-    <h1>{{ message }}</h1>
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
 </header>
 
 {% endblock %}
