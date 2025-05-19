@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    with open('hello.txt', 'r') as file:
+        message = file.read()
+    return render_template('index.html', message=message)
 
 
 @app.route('/newpost/')
