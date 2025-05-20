@@ -5,7 +5,7 @@
 <header>
     <ul>
         {% for message in messages %}
-        <li>{{ date }}|{{ message }}</li>
+        <li>{{ message[0] }}|{{ message[1] }}</li>
         {% endfor %}
     </ul>
 </header>
