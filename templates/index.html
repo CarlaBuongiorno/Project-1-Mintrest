@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <header>
+    <h1>Mintrest Logo</h1>
+</header>
+
+<main>
     <ul>
         {% for message in messages %}
-        <li>{{ message[0] }}|{{ message[1] }}</li>
+            <li>{{ message[0] }}|{{ message[1] }}</li>
         {% endfor %}
     </ul>
-</header>
+</main>
 
 {% endblock %}
