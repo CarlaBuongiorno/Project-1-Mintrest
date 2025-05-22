@@ -8,11 +8,16 @@
 </head>
 
 <body>
-
-    <section>
+    <!-- Logo -->
+    <header>
+        <a href="{{ url_for('index') }}">Mintrest Logo</a>
+    </header>
+    
+    <!-- Content -->
+    <main>
         {% block content %}
         {% endblock %}
-    </section>
+    </main>
 
 </body>
 </html>
