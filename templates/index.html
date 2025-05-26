@@ -4,9 +4,25 @@
 
     <section>
         <a href="{{ url_for('new_post') }}">New Post</a>
+    </section>
+
+    <section>
         <ul>
-            {% for message in messages %}
-                <li>{{ message[0] }}|{{ message[1] }}</li>
+            {% for date, title in messages %}
+                <div id="pin">
+                    <div>
+                        <img src="{{ image }}" alt="Mintrest Picture"/>
+                    </div>
+                    <div>
+                        <h3>{{ title }}</h3>
+                    </div>
+                    <div>
+                        {{ description }}
+                    </div>
+                    <div>
+                        {{ date }}
+                    </div>
+                </div>
             {% endfor %}
         </ul>
     </section>
