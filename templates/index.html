@@ -8,19 +8,19 @@
 
     <section>
         <ul>
-            {% for date, title in messages %}
+            {% for data in pins %}
                 <div id="pin">
                     <div>
-                        <img src="{{ image }}" alt="Mintrest Picture"/>
+                        <img src="{{ data['image'] }}" alt="Mintrest Picture"/>
                     </div>
                     <div>
-                        <h3>{{ title }}</h3>
+                        <h3>{{ data['title'] }}</h3>
                     </div>
                     <div>
-                        {{ description }}
+                        {{ data['description'] }}
                     </div>
                     <div>
-                        {{ date }}
+                        {{ data['date'] }}
                     </div>
                 </div>
             {% endfor %}
