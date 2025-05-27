@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
-    <form>This is a form</form>
+    <form action="{{ url_for('add_post')}}" method="post">
+        <input type="text" name="title" placeholder="Give Your Pin a Title">
+        <input type="text" name="image" placeholder="Give Your Pin an Image">
+        <input type="text" name="description" placeholder="Give Your Pin a Description">
+        <button>Post</button>
+    </form>
 
 {% endblock %}
