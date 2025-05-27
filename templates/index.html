@@ -10,17 +10,17 @@
         <ul>
             {% for data in pins %}
                 <div id="pin">
-                    <div>
-                        <img src="{{ data['image'] }}" alt="Mintrest Picture"/>
+                    <img src="{{ data['image'] }}" alt="Mintrest Picture"/>
+                    <div class="text-container">
+                        <div class="title">
+                            <h3>{{ data['title'] }}</h3>
+                        </div>
+                        <div class="description">
+                            <p>{{ data['description'] }}</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>{{ data['title'] }}</h3>
-                    </div>
-                    <div>
-                        {{ data['description'] }}
-                    </div>
-                    <div>
-                        {{ data['date'] }}
+                    <div class="date">
+                        <p>{{ data['date'] }}</p>
                     </div>
                 </div>
             {% endfor %}

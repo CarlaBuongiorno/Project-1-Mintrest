@@ -1,3 +1,41 @@
-h1 {
-    color: darkred;
+#pin {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 75%;
+    border: 5px solid green;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+img {
+    display: block;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48%;
+}
+
+div.text-container {
+    float: right;
+    width: 48%;
+}
+
+div.title h3,
+div.description p {
+    margin-left: 5%;
+}
+
+div.date {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+div.date p {
+    text-align: right;
+    margin-right: 20px;
+    margin-left: 5%;
 }
