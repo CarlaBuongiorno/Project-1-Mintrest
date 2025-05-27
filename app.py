@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 import datetime
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    with open('hello.txt', 'r') as file:
+    with open('pins.txt', 'r') as file:
         mintrest_data = file.readlines()
         pins_data = process_line(mintrest_data)
         pin_data = group_pins(pins_data)
@@ -40,10 +40,26 @@ def create_pin(date, title, description, image):
 
 def get_date(date):
     # Displays the recorded date
-    date = datetime.datetime.fromtimestamp(int(date))
+    date = datetime.datetime.fromtimestamp(float(date))
     return date.strftime("%d %B %Y")
 
 
 @app.route('/newpost/')
 def new_post():
     return render_template('new-post.html')
+
+
+@app.route('/', methods=['POST'])
+def add_post():
+    date = get_current_date()
+    title = request.form.get('title')
+    image = request.form.get('image')
+    description = request.form.get('description')
+    with open('pins.txt', 'a') as file:
+        file.write(f'{date}\n{title}\n{description}\n{image}\n')
+    return render_template('index.html', title=title, image=image, description=description)
+
+
+def get_current_date():
+    current_date = datetime.datetime.now()
+    return current_date.timestamp()
