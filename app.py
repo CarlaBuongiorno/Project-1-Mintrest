@@ -47,16 +47,26 @@ def get_date(date):
 @app.route('/newpost/', methods=['GET', 'POST'])
 def new_post():
     if request.method == 'POST':
-        date = get_current_date()
-        title = request.form.get('title')
-        image = request.form.get('image')
-        description = request.form.get('description')
-        with open('pins.txt', 'a') as file:
-            file.write(f'{date}\n{title}\n{description}\n{image}\n')
+        post_data = get_post_data()
+        save_post_to_file(post_data)
         return redirect(url_for('index'))
     return render_template('new-post.html')
+
+
+def get_post_data():
+    return {
+        'date': get_current_date(),
+        'title': request.form.get('title'),
+        'description': request.form.get('description'),
+        'image': request.form.get('image')
+    }
 
 
 def get_current_date():
     current_date = datetime.datetime.now()
     return current_date.timestamp()
+
+
+def save_post_to_file(post_data):
+    with open('pins.txt', 'a') as file:
+        file.write(f'{post_data['date']}\n{post_data['title']}\n{post_data['description']}\n{post_data['image']}\n')
