@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 import datetime
 
@@ -44,20 +44,17 @@ def get_date(date):
     return date.strftime("%d %B %Y")
 
 
-@app.route('/newpost/')
+@app.route('/newpost/', methods=['GET', 'POST'])
 def new_post():
+    if request.method == 'POST':
+        date = get_current_date()
+        title = request.form.get('title')
+        image = request.form.get('image')
+        description = request.form.get('description')
+        with open('pins.txt', 'a') as file:
+            file.write(f'{date}\n{title}\n{description}\n{image}\n')
+        return redirect(url_for('index'))
     return render_template('new-post.html')
-
-
-@app.route('/', methods=['POST'])
-def add_post():
-    date = get_current_date()
-    title = request.form.get('title')
-    image = request.form.get('image')
-    description = request.form.get('description')
-    with open('pins.txt', 'a') as file:
-        file.write(f'{date}\n{title}\n{description}\n{image}\n')
-    return render_template('index.html', title=title, image=image, description=description)
 
 
 def get_current_date():
