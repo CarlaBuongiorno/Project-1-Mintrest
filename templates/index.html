@@ -3,15 +3,13 @@
 {% block content %}
 
     <section>
-        <a href="{{ url_for('new_post') }}">New Post</a>
-    </section>
-
-    <section>
         <p>{{ title }}</p>
         <ul>
             {% for data in pins %}
                 <div id="pin">
-                    <img src="{{ data['image'] }}" alt="Mintrest Picture"/>
+                    <div class="fill">
+                        <img src="{{ data['image'] }}" alt="Mintrest Picture"/>
+                    </div>
                     <div class="text-container">
                         <div class="title">
                             <h3>{{ data['title'] }}</h3>

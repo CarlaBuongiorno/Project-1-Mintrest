@@ -1,19 +1,27 @@
 #pin {
+    border-radius: 25px;
     margin: auto;
     margin-bottom: 30px;
     width: 75%;
-    border: 5px solid green;
+    border: 5px solid crimson;
     overflow: hidden;
     padding: 20px;
     position: relative;
 }
 
-img {
-    display: block;
+.fill {
+    display: flex;
+    justify-content: center;
     float: left;
-    margin-left: auto;
-    margin-right: auto;
     width: 48%;
+    height: 700px;
+    overflow: hidden
+}
+
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
 div.text-container {
@@ -39,3 +47,12 @@ div.date p {
     margin-right: 20px;
     margin-left: 5%;
 }
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: crimson;
+}
+  
