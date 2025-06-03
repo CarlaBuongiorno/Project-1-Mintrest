@@ -21,7 +21,7 @@
 .fill img {
     flex-shrink: 0;
     min-width: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
 
 div.text-container {
@@ -48,11 +48,42 @@ div.date p {
     margin-left: 5%;
 }
 
+header {
+    height: 50px;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+
+div a {
+    text-decoration: none;
+}
+
+div.logo {
+    float: left;
+}
+
 .great-vibes-regular {
     font-family: "Great Vibes", cursive;
     font-weight: 800;
     font-style: normal;
-    font-size: 40px;
+    font-size: 50px;
     color: crimson;
+    padding: 10px;
 }
-  
+
+div.button {
+    background-color: crimson;
+    border-radius: 25px;
+    display: flex;
+    float: right;
+}
+
+.merriweather-sans-post {
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: normal;
+    padding: 15px;
+  }
