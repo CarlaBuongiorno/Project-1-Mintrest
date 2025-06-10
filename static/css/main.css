@@ -1,8 +1,9 @@
-#pin {
+#pin,
+#post-form {
     border-radius: 25px;
     margin: auto;
     margin-bottom: 30px;
-    width: 75%;
+    width: 50%;
     border: 5px solid crimson;
     overflow: hidden;
     padding: 20px;
@@ -14,7 +15,7 @@
     justify-content: center;
     float: left;
     width: 48%;
-    height: 700px;
+    height: 600px;
     overflow: hidden
 }
 
@@ -71,11 +72,20 @@ div.logo {
     padding: 10px;
 }
 
-div.button {
+div.new-post-button,
+button.post-button {
     background-color: crimson;
     border-radius: 25px;
+}
+
+div.new-post-button {
     display: flex;
     float: right;
+}
+
+button.post-button {
+    display: block;
+    margin: auto;
 }
 
 .merriweather-sans-post {
