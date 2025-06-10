@@ -27,20 +27,20 @@
 <section>
     <div id="post-form">
         <form action="{{ url_for('new_post')}}" method="post">
-            <div>
-                <label for="title">Title</label>
-                <input type="text" name="title" placeholder="Give Your Pin a Title">
+            <div class="form-field-padding">
+                <label for="title" class="merriweather-sans">Title</label>
+                <input type="text" name="title" placeholder="Give Your Pin a Title" class="merriweather-sans">
             </div>
-            <div>
-                <label for="image">Image</label>
-                <input type="text" name="image" placeholder="Give Your Pin an Image">
+            <div class="form-field-padding">
+                <label for="image" class="merriweather-sans">Image</label>
+                <input type="text" name="image" placeholder="Give Your Pin an Image" class="merriweather-sans">
             </div>
-            <div>
-                <label for="description">Description</label>
-                <input type="text" name="description" placeholder="Give Your Pin a Description">
+            <div class="form-field-padding">
+                <label for="description" class="merriweather-sans">Description</label>
+                <input type="text" name="description" placeholder="Give Your Pin a Description" class="merriweather-sans">
             </div>
 
-            <button class="merriweather-sans-post post-button">Post Pin</button>
+            <button class="merriweather-sans post-button">Post Pin</button>
 
         </form>
     </div>

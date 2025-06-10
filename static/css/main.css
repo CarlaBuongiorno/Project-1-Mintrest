@@ -83,13 +83,17 @@ div.new-post-button {
     float: right;
 }
 
+div a.merriweather-sans {
+    color: white;
+}
+
 button.post-button {
+    color: white;
     display: block;
     margin: auto;
 }
 
-.merriweather-sans-post {
-    color: white;
+.merriweather-sans {
     font-family: "Merriweather Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 20px;
@@ -97,3 +101,17 @@ button.post-button {
     font-style: normal;
     padding: 15px;
   }
+
+label.merriweather-sans {
+    font-weight: 100;
+}
+
+input.merriweather-sans {
+    font-size: 10px;
+    font-weight: 50;
+    padding: 10px;
+}
+
+.form-field-padding {
+    padding: 20px;
+}
