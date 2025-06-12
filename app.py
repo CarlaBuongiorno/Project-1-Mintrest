@@ -13,8 +13,9 @@ def index():
         pins_data = process_line(mintrest_data)
         pin_data = group_pins(pins_data)
         pins = [create_pin(date=pin[0], title=pin[1], description=pin[2], image=pin[3]) for pin in pin_data]
+        sorted_pins = sorted(pins, key=lambda x: x['timestamp'], reverse=True)
     new_post = 'New Post'
-    return render_template('index.html', pins=pins, new_post=new_post)
+    return render_template('index.html', pins=sorted_pins, new_post=new_post)
 
 
 def process_line(mintrest_data):
@@ -32,6 +33,7 @@ def group_pins(pins):
 def create_pin(date, title, description, image):
     # Create a list dictionaries for each each pin)
     return {
+        'timestamp': date,
         'date': get_date(date),
         'title': title,
         'description': description,
