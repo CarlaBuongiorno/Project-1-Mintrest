@@ -1,6 +1,6 @@
 #pin,
 #post-form {
-    border-radius: 25px;
+    border-radius: 95px;
     margin: auto;
     margin-bottom: 30px;
     width: 50%;
@@ -76,6 +76,7 @@ div.new-post-button,
 button.post-button {
     background-color: crimson;
     border-radius: 25px;
+    padding: 15px;
 }
 
 div.new-post-button {
@@ -83,14 +84,10 @@ div.new-post-button {
     float: right;
 }
 
-div a.merriweather-sans {
-    color: white;
-}
-
 button.post-button {
     color: white;
     display: block;
-    margin: auto;
+    margin: 30px auto;
 }
 
 .merriweather-sans {
@@ -99,19 +96,47 @@ button.post-button {
     font-size: 20px;
     font-weight: 800;
     font-style: normal;
-    padding: 15px;
-  }
+}
+
+div a.merriweather-sans {
+    color: white;
+}
+
+.form-field-padding {
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      width: 75%;
+}
+
+h3.pin-heading {
+    color: crimson;
+    font-size: 40px;
+    padding-top: 0;
+    text-align: center;
+}
+
+h3.pin-title {
+    color: crimson;
+    font-size: 30px;
+}
+
+p.merriweather-sans {
+    font-weight: 350;
+}
 
 label.merriweather-sans {
     font-weight: 100;
 }
 
 input.merriweather-sans {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 50;
     padding: 10px;
 }
 
-.form-field-padding {
-    padding: 20px;
+input {
+    width: 75%;
 }
