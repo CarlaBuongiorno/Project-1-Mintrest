@@ -3,10 +3,10 @@
 {% block content %}
 
     <section>
-        <p>{{ title }}</p>
+
         <ul>
             {% for data in pins %}
-                <div id="pin">
+                <li id="pin">
                     <div class="fill">
                         <img src="{{ data['image'] }}" alt="Mintrest Picture"/>
                     </div>
@@ -21,9 +21,10 @@
                     <div class="date">
                         <p>{{ data['date'] }}</p>
                     </div>
-                </div>
+                </li>
             {% endfor %}
         </ul>
+        
     </section>
 
 {% endblock %}                      
